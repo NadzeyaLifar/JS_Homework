@@ -1,10 +1,7 @@
-//Задание 1
+//Задание 1 (исправленнный)
 function createObjectsArr(arr) {
     function changeArrEl(value) {
-        var ojectName = {};
-
-        ojectName.name = value;
-        return ojectName;
+        return {name: value};
     }
     return arr.map(changeArrEl);
 }
@@ -37,23 +34,20 @@ function sumVowels(s) {
 }
 sumVowels('Привет, менЯ зовут Vasya!');
 
-//Задание 4
+//Задание 4 (исправленный)
 function transformText(text) {
     var textSeparation = text.split(/[.?!]/);
+   //textSeparation.pop();
+   if (!(textSeparation[textSeparation.length-1].length)) {
     textSeparation.pop();
-  
+    }
     function determineLength(arr) {
         var arrLength = arr.split(/[, ]/).join('').length;
-  
         return arr.trim() + ' - ' + arrLength + ' букв';
     }
-  
     return textSeparation.map(determineLength).join('\n');
   }
-  console.log( transformText('Добрый день! Меня, кстати, зовут Вася. Давайте познакомимся?') );
-
-
-
+  console.log( transformText('Добрый день! Меня, кстати, зовут Вася. Давайте познакомимся? Я хороший парень') );
 
 
 

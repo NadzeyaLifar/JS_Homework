@@ -142,43 +142,32 @@ console.log(initialObj);
 console.log(clonedObj);
 
 
-//Задание 3
+//Задание 3 (исправленный)
 
 function deepEqual(obj1, obj2) {
- //Объекты
     if (Object.keys(obj1).length === Object.keys(obj2).length) {
-
         for (var key in obj1) {
             if (obj1.hasOwnProperty(key) && obj2.hasOwnProperty(key)) {
                 var obj1Value = obj1[key],
                     obj2Value = obj2[key];
 
                 if (typeof obj1Value === 'object' && obj1Value !== null) {
-
-                    if (!deepEqual(obj1Value, obj2Value)) {
-                        return 'Объекты не равны';
-                    } 
-    //Функции
+                    if (!deepEqual(obj1Value, obj2Value)) { 
+                        return false;
+                    };
                 } else if (typeof obj1Value === 'function') {
-
-                    if (obj1Value.toString() !== obj2Value.toString()) {
-                        return 'Объекты не равны';
-                    }
-
+                    if (obj1Value.toString() !== obj2Value.toString()) { 
+                        return false;
+                    };
                 } else if (obj1Value !== obj2Value) {
-                    return 'Объекты не равны';
-                } 
-
+                    return false;
+                };
             } else {
-                return 'Объекты не равны';
+                return false;
             }
-        } 
-        return 'Объекты равны';
-    } 
-    return 'Объекты не равны';
+         } return true;
+    } return false;
 }
-
-
 // проверка
 
 var obj1 = {
@@ -231,7 +220,7 @@ var obj1 = {
     object: {
         string2: 'Petrov',
         object2: {
-            array2: [{1: 4}, {}]
+            array2: [{}, {}]
         },
         object3: {}
     },
