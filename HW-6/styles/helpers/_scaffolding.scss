@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+.content {
+   max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+   font: 400 14px 'Roboto', sans-serif;
+   display: flex;
+   flex-direction: column;
+   background-color: #f2f4f8;
+   min-width: 500px;
+
+
+   
+}
+.main {
+   flex-grow: 1;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
