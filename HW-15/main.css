@@ -1,0 +1,14 @@
+td {
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 5px;
+}
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+.button-name {
+    font-weight: 700;
+}
