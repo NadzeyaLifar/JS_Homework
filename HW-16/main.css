@@ -1,0 +1,80 @@
+body {
+    background-color: black;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 600px;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.button {
+    border-radius: 5px;
+    font-weight: bold;
+    height: 30px;
+    border: 1px solid green;
+    outline: none;
+    cursor: pointer;
+    background-color: green;
+    margin-left: -105px;
+    text-align: center;
+}
+
+.content {
+    width: 100%;
+    padding: 20px;
+    order: 1;
+    border-radius: 5px;
+}
+
+.label {
+    width: 70px;
+    height: 20px;
+    background: lightgreen;
+    border: 1px solid green;
+    padding: 5px 5px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.active {
+    background-color: lightgreen;
+}
+
+input,
+.content {
+    display: none;
+}
+
+input:checked + .label {
+    background-color:green;
+}
+
+input:checked + .label + .content {
+    display: block;
+    background-color: green;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    margin-right: 10px;
+}
+
+.error {
+    color: red;
+}
